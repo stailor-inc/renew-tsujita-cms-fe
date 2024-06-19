@@ -25,6 +25,9 @@
     "description": "Description about system error"
   },
   "LoginPage": {
+    "logo_aria_label": "CMS Logo",
+    "logo_alt": "CMS Logo",
+    "cms": "CMS",
     "enter_login_info": "Please enter your login information.",
     "email_address_required": "Email Address (Required)",
     "enter_email": "Please enter",
@@ -38,15 +41,28 @@
     "sign_up": "Sign Up"
   },
   "Input": {
-    "placeholder": "Enter your value"
+    "placeholder": "Enter your value",
+    "email_placeholder": "Please enter",
+    "password_placeholder": "Please enter",
+    "error_message": "This is a required field"
   },
   "Label": {
-    "text": "Label Text"
+    "text": "Label Text",
+    "email": "Email Address (Required)",
+    "password": "Password (Required)"
   },
   "Link": {
-    "text": "Link Text"
+    "text": "Link Text",
+    "forgot_password": "Forgot your password? Click here",
+    "sign_up": "Sign Up"
   },
   "Button": {
-    "text": "Button Text"
+    "text": "Button Text",
+    "sign_in": "Sign In"
+  },
+  "shared_components": {
+    "input_error": "This is a required field",
+    "remember_password_aria_label": "Remember password",
+    "account_query": "Already have an account?"
   }
 }

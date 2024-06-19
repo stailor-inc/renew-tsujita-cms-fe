@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { useTranslation } from 'next-i18next'; // Added import for useTranslation
+import { useTranslation } from 'next-i18next';
 import clsx from 'clsx'
 
 import styles from './index.module.css'
@@ -7,14 +7,15 @@ import styles from './index.module.css'
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   linkTo?: string
   buttonType?: 'link' | 'text' | 'ghost' | 'default' | 'primary' | 'dashed'
-  translationKey?: string; // Added translationKey prop
+  translationKey?: string;
+  style?: React.CSSProperties; // Added style prop for custom styling
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonProps, ref) => {
-  const { buttonType = 'primary', title, className, children, linkTo, translationKey, ...rest } = props
-  const { t } = useTranslation(); // Initialized useTranslation hook
+  const { buttonType = 'primary', title, className, children, linkTo, translationKey, style, ...rest } = props
+  const { t } = useTranslation();
 
-  const component = useMemo(() => {
+  const componentContent = useMemo(() => {
     let component = children
     if (typeof children === 'string' || title) {
       component = <span>{children || title}</span>
@@ -23,17 +24,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props: ButtonPr
     if (linkTo) {
       return (
         <a href={linkTo} className={styles.link_tag}>
-          {t(translationKey || '')} {/* Added translation function call */}
+          {t(translationKey || '')}
           {component}
         </a>
       )
     }
     return component
-  }, [linkTo, children, title, t, translationKey]) // Added t and translationKey to dependency array
+  }, [linkTo, children, title, t, translationKey])
 
   return (
-    <button ref={ref} className={clsx(className, styles.button, styles[buttonType])} {...rest}>
-      {component}
+    <button ref={ref} className={clsx(className, styles.button, styles[buttonType])} style={style} {...rest}>
+      {componentContent}
     </button>
   )
 })
