@@ -4,13 +4,19 @@ import { useTranslation } from 'next-i18next';
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   errorMessage?: string;
+  label?: string;
 }
 
-const Input: React.FC<InputProps> = ({ errorMessage, ...props }) => {
+const Input: React.FC<InputProps> = ({ errorMessage, label, ...props }) => {
   const { t } = useTranslation();
 
   return (
     <div>
+      {label && (
+        <label htmlFor={props.id} className={styles.label}>
+          {t(label)}
+        </label>
+      )}
       <input
         className={`${styles.input} ${errorMessage ? styles.inputError : ''}`}
         {...props}
