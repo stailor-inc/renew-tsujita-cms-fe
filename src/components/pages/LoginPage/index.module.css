@@ -1,0 +1,91 @@
+.pageBackground {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://studio-next.jitera.app/no.png');
+  background-size: cover;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 59px;
+  gap: 10px;
+  width: 602px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 60px;
+  width: 100%;
+}
+
+.logoImage {
+  height: 44px;
+}
+
+.cmsTitle {
+  color: rgba(58, 58, 58, 1);
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.loginPrompt {
+  color: rgba(97, 97, 97, 1);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.rememberMeContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.rememberMeLabel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.signInButton {
+  width: 382px;
+  background-color: rgba(24, 86, 158, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.accountQuery {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.accountQueryText {
+  color: rgba(58, 58, 58, 1);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}

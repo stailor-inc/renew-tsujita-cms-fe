@@ -1,0 +1,52 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "go_to_home": "Go to home",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "contact_us": "Contact us",
+      "news": "News"
+    }
+  },
+  "example": {
+    "login": "Login",
+    "logout": "Logout",
+    "next": "Next",
+    "login_success": "Login success!",
+    "logout_success": "Logout success!"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "description": "Description about page not found"
+  },
+  "500": {
+    "title": "System Error",
+    "description": "Description about system error"
+  },
+  "LoginPage": {
+    "enter_login_info": "Please enter your login information.",
+    "email_address_required": "Email Address (Required)",
+    "enter_email": "Please enter",
+    "required_field": "This is a required field",
+    "password_required": "Password (Required)",
+    "enter_password": "Please enter",
+    "remember_password": "Remember password",
+    "forgot_password": "Forgot your password? Click here",
+    "sign_in": "Sign In",
+    "already_have_account": "Already have an account?",
+    "sign_up": "Sign Up"
+  },
+  "Input": {
+    "placeholder": "Enter your value"
+  },
+  "Label": {
+    "text": "Label Text"
+  },
+  "Link": {
+    "text": "Link Text"
+  },
+  "Button": {
+    "text": "Button Text"
+  }
+}

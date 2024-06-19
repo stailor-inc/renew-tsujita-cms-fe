@@ -1,0 +1,11 @@
+.link {
+  color: rgba(24, 86, 158, 1);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
