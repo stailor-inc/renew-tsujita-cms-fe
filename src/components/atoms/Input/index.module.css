@@ -7,6 +7,21 @@
   color: rgba(113, 113, 122, 1);
 }
 
+  .inputWrapper {
+    position: relative;
+  }
+
+  .inputWrapperWithIcon .input {
+    padding-left: 40px;
+  }
+
+  .inputIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
 .input::placeholder {
   color: rgba(113, 113, 122, 0.5);
 }
@@ -16,6 +31,10 @@
   width: 24px;
   height: 24px;
 }
+  .labelWithIcon {
+    margin-bottom: 5px;
+  }
+
 
 .inputError {
   border-color: rgba(243, 18, 96, 1);

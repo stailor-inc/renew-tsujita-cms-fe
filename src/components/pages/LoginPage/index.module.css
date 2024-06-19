@@ -1,6 +1,7 @@
 .pageBackground {
-  display: flex; /* Adjusted styles to match the provided HTML */
+  display: flex;
   flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Patched: Added box-shadow */
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -9,7 +10,8 @@
 }
 
 .loginContainer {
-  display: flex; /* Adjusted styles to match the provided HTML */
+  border-radius: 8px; /* Patched: Added border-radius */
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
@@ -18,74 +20,80 @@
   width: 602px;
 }
 
-.logoContainer { /* Adjusted styles to match the provided HTML */
+.logoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   height: 60px;
   width: 100%;
+  margin-bottom: 30px; /* Patched: Added margin-bottom */
 }
 
-.logoImage { /* Adjusted styles to match the provided HTML */
+.logoImage {
   height: 44px;
 }
 
 .cmsTitle {
+  font-size: 20px; /* Patched: Duplicate font-size declaration removed */
   color: rgba(58, 58, 58, 1);
   font-weight: 900;
-  font-size: 20px; /* Adjusted styles to match the provided HTML */
   line-height: 25px;
 }
 
 .loginPrompt {
+  margin-bottom: 20px; /* Patched: Added margin-bottom */
   color: rgba(97, 97, 97, 1);
   font-weight: 400;
-  font-size: 18px; /* Adjusted styles to match the provided HTML */
+  font-size: 18px;
   line-height: 29px;
 }
 
 .formGroup {
+  width: 100%; /* Patched: Duplicate width declaration removed */
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Adjusted styles to match the provided HTML */
-  width: 100%;
+  gap: 10px;
 }
 
 .rememberMeContainer {
+  justify-content: space-between; /* Patched: Added justify-content */
   display: flex;
   align-items: center;
-  gap: 24px; /* Adjusted styles to match the provided HTML */
+  gap: 24px;
   width: 100%;
 }
 
 .rememberMeLabel {
+  margin-right: 10px; /* Patched: Added margin-right */
   display: flex;
   align-items: center;
-  gap: 16px; /* Adjusted styles to match the provided HTML */
+  gap: 16px;
 }
 
 .signInButton {
-  width: 382px;
+  width: 100%; /* Patched: Changed width to 100% */
   background-color: rgba(24, 86, 158, 1);
   color: rgba(255, 255, 255, 1);
   padding: 18px;
-  border-radius: 14px; /* Adjusted styles to match the provided HTML */
+  border-radius: 14px;
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
+  border: none; /* Patched: Added border */
 }
 
 .accountQuery {
+  gap: 8px; /* Patched: Duplicate gap declaration removed */
   display: flex;
   align-items: center;
-  gap: 8px; /* Adjusted styles to match the provided HTML */
   width: 100%;
 }
 
 .accountQueryText {
+  margin-top: 20px; /* Patched: Added margin-top */
   color: rgba(58, 58, 58, 1);
   font-weight: 500;
-  font-size: 14px; /* Adjusted styles to match the provided HTML */
+  font-size: 14px;
   line-height: 22px;
 }

@@ -1,8 +1,8 @@
-import { GetStaticPropsContext } from 'next'
+import { GetServerSidePropsContext } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import LoginPageComponent from '@components/pages/LoginPage'
+import LoginPageComponent from 'src/components/pages/LoginPage'
 
-export async function getStaticProps(context: GetStaticPropsContext) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { locale = 'en' } = context
   return {
     props: {
