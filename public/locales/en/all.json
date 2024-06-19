@@ -41,6 +41,14 @@
     "sign_up": "Sign Up"
   },
   "Input": {
+    "email_label": "Email Address (Required)",
+    "password_label": "Password (Required)",
+    "email_input_placeholder": "Please enter your email",
+    "password_input_placeholder": "Please enter your password",
+    "email_input_error": "Email is a required field",
+    "password_input_error": "Password is a required field",
+    "remember_me_label": "Remember password",
+    "sign_in_button": "Sign In",
     "placeholder": "Enter your value",
     "email_placeholder": "Please enter",
     "password_placeholder": "Please enter",
@@ -52,6 +60,14 @@
     "password": "Password (Required)"
   },
   "Link": {
+    "forgot_password": "Forgot your password? Click here",
+    "sign_up": "Sign Up"
+  },
+  "LoginPage": {
+    "prompt": "Please enter your login information.",
+    "account_query": "Already have an account?"
+  },
+  "Link": {
     "text": "Link Text",
     "forgot_password": "Forgot your password? Click here",
     "sign_up": "Sign Up"
@@ -59,6 +75,10 @@
   "Button": {
     "text": "Button Text",
     "sign_in": "Sign In"
+  },
+  "LoginPage": {
+    "forgot_password_link": "Forgot your password? Click here",
+    "sign_up_link": "Sign Up"
   },
   "shared_components": {
     "input_error": "This is a required field",

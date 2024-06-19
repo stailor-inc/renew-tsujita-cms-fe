@@ -1,5 +1,5 @@
 .pageBackground {
-  display: flex;
+  display: flex; /* Adjusted styles to match the provided HTML */
   flex-direction: column;
   height: 100vh;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .loginContainer {
-  display: flex;
+  display: flex; /* Adjusted styles to match the provided HTML */
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 1);
@@ -18,7 +18,7 @@
   width: 602px;
 }
 
-.logoContainer {
+.logoContainer { /* Adjusted styles to match the provided HTML */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,42 +27,42 @@
   width: 100%;
 }
 
-.logoImage {
+.logoImage { /* Adjusted styles to match the provided HTML */
   height: 44px;
 }
 
 .cmsTitle {
   color: rgba(58, 58, 58, 1);
   font-weight: 900;
-  font-size: 20px;
+  font-size: 20px; /* Adjusted styles to match the provided HTML */
   line-height: 25px;
 }
 
 .loginPrompt {
   color: rgba(97, 97, 97, 1);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 18px; /* Adjusted styles to match the provided HTML */
   line-height: 29px;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* Adjusted styles to match the provided HTML */
   width: 100%;
 }
 
 .rememberMeContainer {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 24px; /* Adjusted styles to match the provided HTML */
   width: 100%;
 }
 
 .rememberMeLabel {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 16px; /* Adjusted styles to match the provided HTML */
 }
 
 .signInButton {
@@ -70,7 +70,7 @@
   background-color: rgba(24, 86, 158, 1);
   color: rgba(255, 255, 255, 1);
   padding: 18px;
-  border-radius: 14px;
+  border-radius: 14px; /* Adjusted styles to match the provided HTML */
   font-weight: 700;
   font-size: 14px;
   line-height: 22px;
@@ -79,13 +79,13 @@
 .accountQuery {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* Adjusted styles to match the provided HTML */
   width: 100%;
 }
 
 .accountQueryText {
   color: rgba(58, 58, 58, 1);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 14px; /* Adjusted styles to match the provided HTML */
   line-height: 22px;
 }

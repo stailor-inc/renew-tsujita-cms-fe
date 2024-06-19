@@ -15,13 +15,13 @@ const LoginPage: React.FC = () => {
   return (
     <div className={styles.pageBackground}>
       <div className={styles.loginContainer}>
-        <div className={styles.logoContainer} aria-label={t('LoginPage.logo_aria_label')}>
+        <div className={styles.logoContainer}>
           <img src="https://studio-next.jitera.app/no.png" alt={t('LoginPage.logo_alt')} className={styles.logoImage} />
           <span className={styles.cmsTitle}>{t('LoginPage.cms')}</span>
         </div>
         <span className={styles.loginPrompt}>{t('LoginPage.enter_login_info')}</span>
         <div className={styles.formGroup}>
-          <Label translationKey="LoginPage.email_address_required" />
+          <Label labelTranslationKey="LoginPage.email_address_required" />
           <Input
             type="email"
             id="email"
@@ -31,7 +31,7 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <span>{t('LoginPage.required_field')}</span>
-          <Label translationKey="LoginPage.password_required" />
+          <Label labelTranslationKey="LoginPage.password_required" />
           <Input
             id="password"
             type="password"
@@ -42,21 +42,21 @@ const LoginPage: React.FC = () => {
           />
           <span>{t('LoginPage.required_field')}</span>
         </div>
-        <div className={styles.rememberMeContainer} aria-label={t('LoginPage.remember_password_aria_label')}>
+        <div className={styles.rememberMeContainer}>
           <label className={styles.rememberMeLabel}>
             <Input
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
             />
-            <span>{t('LoginPage.remember_password')}</span>
+            <span>{t('LoginPage.remember_me')}</span>
           </label> 
         </div>
         <Link href="/reset-password" translationKey="LoginPage.forgot_password" />
         <Button className={styles.signInButton} translationKey="LoginPage.sign_in">{t('LoginPage.sign_in')}</Button>
         <div className={styles.accountQuery}>
           <span className={styles.accountQueryText}>{t('LoginPage.already_have_account')}</span>
-          <Link href="/sign-up" translationKey="LoginPage.sign_up" />
+          <Link href="/sign-up" translationKey="LoginPage.sign_up_here" />
         </div>
       </div>
     </div>
