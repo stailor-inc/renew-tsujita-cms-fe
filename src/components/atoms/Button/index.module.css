@@ -4,8 +4,17 @@
     text-decoration: none;
   }
 
-  .link_tag:hover {
-    text-decoration: none;
+  .iconWrapper {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .iconLeft {
+    margin-right: 8px;
+  }
+
+  .iconRight {
+    margin-left: 8px;
   }
 
   .button {
@@ -48,6 +57,21 @@
     background: transparent;
     box-shadow: none;
   }
+
+  .loader {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .primary:hover,

@@ -9,6 +9,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   labelTranslationKey?: string; // Added labelTranslationKey prop for label translation
   errorTranslationKey?: string; // Added errorTranslationKey prop for error message translation
   containerStyle?: React.CSSProperties; // Added containerStyle prop for custom styling of the container
+  icon?: React.ReactNode; // Added icon prop for input icon
 }
 
 const Input: React.FC<InputProps> = ({
@@ -17,6 +18,7 @@ const Input: React.FC<InputProps> = ({
   labelTranslationKey,
   errorTranslationKey,
   containerStyle,
+  icon,
   ...props
 }) => {
   const { t } = useTranslation();
@@ -24,19 +26,22 @@ const Input: React.FC<InputProps> = ({
   return (
     <div style={containerStyle}>
       {label && !labelTranslationKey && (
-        <label htmlFor={props.id} className={styles.label}>
+        <label htmlFor={props.id} className={clsx(styles.label, { [styles.labelWithIcon]: icon })}>
           {label}
         </label>
       )}
       {labelTranslationKey && (
-        <label htmlFor={props.id} className={styles.label}>
+        <label htmlFor={props.id} className={clsx(styles.label, { [styles.labelWithIcon]: icon })}>
           {t(labelTranslationKey)}
         </label>
       )}
-      <input
-        className={clsx(styles.input, { [styles.inputError]: errorMessage })}
-        {...props}
-      />
+      <div className={clsx(styles.inputWrapper, { [styles.inputWrapperWithIcon]: icon })}>
+        {icon && <div className={styles.inputIcon}>{icon}</div>}
+        <input
+          className={clsx(styles.input, { [styles.inputError]: errorMessage })}
+          {...props}
+        />
+      </div>
       {errorMessage && (
         <span className={styles.errorMessage}>
           {t(errorTranslationKey || errorMessage)}

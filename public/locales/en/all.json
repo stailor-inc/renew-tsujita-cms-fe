@@ -31,14 +31,16 @@
     "enter_login_info": "Please enter your login information.",
     "email_address_required": "Email Address (Required)",
     "enter_email": "Please enter",
-    "required_field": "This is a required field",
+    "required_field": "This field is required",
     "password_required": "Password (Required)",
     "enter_password": "Please enter",
     "remember_password": "Remember password",
-    "forgot_password": "Forgot your password? Click here",
-    "sign_in": "Sign In",
+    "forgot_password_link": "Forgot your password? Click here",
+    "sign_in": "Sign in",
     "already_have_account": "Already have an account?",
-    "sign_up": "Sign Up"
+    "sign_up_link": "Sign Up",
+    "prompt": "Please enter your login information.",
+    "account_query": "Already have an account?"
   },
   "Input": {
     "email_label": "Email Address (Required)",
@@ -52,7 +54,7 @@
     "placeholder": "Enter your value",
     "email_placeholder": "Please enter",
     "password_placeholder": "Please enter",
-    "error_message": "This is a required field"
+    "error_message": "This field is required"
   },
   "Label": {
     "text": "Label Text",
@@ -61,28 +63,42 @@
   },
   "Link": {
     "forgot_password": "Forgot your password? Click here",
-    "sign_up": "Sign Up"
-  },
-  "LoginPage": {
-    "prompt": "Please enter your login information.",
-    "account_query": "Already have an account?"
-  },
-  "Link": {
-    "text": "Link Text",
-    "forgot_password": "Forgot your password? Click here",
-    "sign_up": "Sign Up"
+    "sign_up": "Sign Up",
+    "text": "Link Text"
   },
   "Button": {
     "text": "Button Text",
     "sign_in": "Sign In"
   },
-  "LoginPage": {
-    "forgot_password_link": "Forgot your password? Click here",
-    "sign_up_link": "Sign Up"
-  },
   "shared_components": {
     "input_error": "This is a required field",
     "remember_password_aria_label": "Remember password",
-    "account_query": "Already have an account?"
+    "account_query": "Already have an account?",
+    "button_loading": "Loading...",
+    "button_icon_alt": "Button icon",
+    "input_error_message": "This is a required field",
+    "input_remember_me_label": "Remember password",
+    "input_email_label": "Email Address (Required)",
+    "input_password_label": "Password (Required)",
+    "input_email_placeholder": "Please enter your email",
+    "input_password_placeholder": "Please enter your password",
+    "input_checkbox_label": "Remember me",
+    "link_forgot_password": "Forgot your password? Click here",
+    "link_sign_up": "Sign Up",
+    "button_sign_in": "Sign In",
+    "link_sign_up_here": "Sign Up Here"
+  },
+  "main_components": {
+    "login_page_background_image_alt": "Background image",
+    "login_page_logo_alt": "CMS Logo",
+    "login_page_prompt": "Please enter your login information.",
+    "login_page_email_label": "Email Address (Required)",
+    "login_page_password_label": "Password (Required)",
+    "login_page_required_field": "This field is required",
+    "login_page_remember_me_label": "Remember password",
+    "login_page_forgot_password": "Forgot your password? Click here",
+    "login_page_sign_in_button": "Sign In",
+    "login_page_account_query": "Already have an account?",
+    "login_page_sign_up_link": "Sign Up"
   }
 }
