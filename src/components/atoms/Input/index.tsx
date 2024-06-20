@@ -8,8 +8,8 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   label?: string;
   labelTranslationKey?: string; // Added labelTranslationKey prop for label translation
   errorTranslationKey?: string; // Added errorTranslationKey prop for error message translation
+  containerClassName?: string; // Added containerClassName prop for custom class names of the container
   containerStyle?: React.CSSProperties; // Added containerStyle prop for custom styling of the container
-  icon?: React.ReactNode; // Added icon prop for input icon
 }
 
 const Input: React.FC<InputProps> = ({
@@ -18,30 +18,27 @@ const Input: React.FC<InputProps> = ({
   labelTranslationKey,
   errorTranslationKey,
   containerStyle,
-  icon,
+  containerClassName,
   ...props
 }) => {
   const { t } = useTranslation();
 
   return (
-    <div style={containerStyle}>
-      {label && !labelTranslationKey && (
-        <label htmlFor={props.id} className={clsx(styles.label, { [styles.labelWithIcon]: icon })}>
+    <div style={containerStyle} className={clsx(containerClassName)}>
+      {label && !labelTranslationKey ? (
+        <label htmlFor={props.id} className={styles.label}>
           {label}
         </label>
-      )}
+      ) : null}
       {labelTranslationKey && (
-        <label htmlFor={props.id} className={clsx(styles.label, { [styles.labelWithIcon]: icon })}>
+        <label htmlFor={props.id} className={styles.label}>
           {t(labelTranslationKey)}
         </label>
       )}
-      <div className={clsx(styles.inputWrapper, { [styles.inputWrapperWithIcon]: icon })}>
-        {icon && <div className={styles.inputIcon}>{icon}</div>}
-        <input
-          className={clsx(styles.input, { [styles.inputError]: errorMessage })}
-          {...props}
-        />
-      </div>
+      <input
+        className={clsx(styles.input, { [styles.inputError]: errorMessage })}
+        {...props}
+      />
       {errorMessage && (
         <span className={styles.errorMessage}>
           {t(errorTranslationKey || errorMessage)}
@@ -51,4 +48,4 @@ const Input: React.FC<InputProps> = ({
   );
 };
 
-export default Input;
+export default React.memo(Input);
