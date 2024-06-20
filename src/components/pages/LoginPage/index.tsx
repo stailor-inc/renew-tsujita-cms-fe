@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, CSSProperties } from 'react';
 import { useTranslation } from 'next-i18next';
-import { Input } from '@components/atoms/Input';
-import { Label } from '@components/atoms/Label';
-import { Link } from '@components/atoms/Link';
-import { Button } from '@components/atoms/Button';
+import Input from '@components/atoms/Input';
+import Label from '@components/atoms/Label';
+import Link from '@components/atoms/Link';
+import Button from '@components/atoms/Button';
 import styles from './index.module.css';
 
 const LoginPage: React.FC = () => {
@@ -19,9 +19,9 @@ const LoginPage: React.FC = () => {
           <img src="https://studio-next.jitera.app/no.png" alt={t('LoginPage.logo_alt')} className={styles.logoImage} />
           <span className={styles.cmsTitle}>{t('LoginPage.cms')}</span>
         </div>
-        <span className={styles.loginPrompt}>{t('LoginPage.enter_login_info')}</span>
+        <span className={styles.loginPrompt}>{t('LoginPage.login_info')}</span>
         <div className={styles.formGroup}>
-          <Label labelTranslationKey="LoginPage.email_address_required" />
+          <Label translationKey="LoginPage.email_address_required" />
           <Input
             type="email"
             id="email"
@@ -29,10 +29,9 @@ const LoginPage: React.FC = () => {
             placeholder={t('LoginPage.enter_email')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ padding: '14px', border: '2px solid #E4E4E7', borderRadius: '8px' }}
           />
-          <span>{t('LoginPage.required_field')}</span>
-          <Label labelTranslationKey="LoginPage.password_required" style={{ gap: '7px', color: '#3A3A3A', fontSize: '12px', lineHeight: '20px' }} />
+          <span className={styles.errorMessage}>{t('LoginPage.required_field')}</span>
+          <Label translationKey="LoginPage.password_required" />
           <Input
             id="password"
             type="password"
@@ -40,23 +39,20 @@ const LoginPage: React.FC = () => {
             placeholder={t('LoginPage.enter_password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ padding: '14px', border: '2px solid #E4E4E7', borderRadius: '8px' }}
           />
-          <span>{t('LoginPage.required_field')}</span>
+          <span className={styles.errorMessage}>{t('LoginPage.required_field')}</span>
         </div>
-        <div className={styles.rememberMeContainer}>
-          <label className={styles.rememberMeLabel}>
-            <Input
-              type="checkbox"
-              checked={rememberMe}
-              onChange={(e) => setRememberMe(e.target.checked)}
-              id="remember-password"
-            />
-            <span>{t('LoginPage.remember_me')}</span>
-          </label> 
+        <div className={styles.rememberMeContainer} style={{ marginBottom: '24px' }}>
+          <Input
+            type="checkbox"
+            checked={rememberMe}
+            onChange={(e) => setRememberMe(e.target.checked)}
+            id="remember-password"
+          />
+          <Label translationKey="LoginPage.remember_me" htmlFor="remember-password" />
         </div>
-        <Link href="/reset-password" translationKey="LoginPage.forgot_password" />
-        <Button className={styles.signInButton} translationKey="LoginPage.sign_in">{t('LoginPage.sign_in')}</Button>
+        <Link href="/reset-password" translationKey="LoginPage.forgot_password" className={styles.link} />
+        <Button translationKey="LoginPage.sign_in" className={styles.signInButton} />
         <div className={styles.accountQuery}>
           <span className={styles.accountQueryText}>{t('LoginPage.already_have_account')}?</span>
           <Link href="/sign-up" translationKey="LoginPage.sign_up_here" />

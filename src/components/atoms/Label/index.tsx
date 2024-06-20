@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
-import clsx from 'clsx';
+import clsx from 'clsx'; // Added import for clsx
 import { useTranslation } from 'next-i18next';
 
 export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
@@ -16,7 +16,7 @@ const Label: React.FC<LabelProps> = ({
   style,
   className,
   containerStyle,
-  containerClassName,
+  containerClassName, // Destructure containerClassName from props
   children,
   ...props
 }) => {
@@ -24,7 +24,7 @@ const Label: React.FC<LabelProps> = ({
 
   return (
     <div style={containerStyle} className={clsx(containerClassName)}>
-      <label className={clsx(styles.label, className)} style={style} {...props}>
+      <label className={clsx(styles.label, className)} style={style} {...props}> // Apply custom class names and styles
         {t(translationKey)}
         {children}
       </label>
