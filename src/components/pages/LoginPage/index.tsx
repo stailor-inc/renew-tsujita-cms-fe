@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
   return (
     <div className={styles.pageBackground}>
       <div className={styles.loginContainer}>
-        <div className={styles.logoContainer} style={{ marginBottom: '30px' }}>
+        <div className={styles.logoContainer} style={{ width: '284px', height: '44px' }}>
           <img src="https://studio-next.jitera.app/no.png" alt={t('LoginPage.logo_alt')} className={styles.logoImage} />
           <span className={styles.cmsTitle}>{t('LoginPage.cms')}</span>
         </div>
@@ -29,10 +29,10 @@ const LoginPage: React.FC = () => {
             placeholder={t('LoginPage.enter_email')}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={{ marginBottom: '10px' }}
+            style={{ padding: '14px', border: '2px solid #E4E4E7', borderRadius: '8px' }}
           />
           <span>{t('LoginPage.required_field')}</span>
-          <Label labelTranslationKey="LoginPage.password_required" style={{ marginBottom: '10px' }} />
+          <Label labelTranslationKey="LoginPage.password_required" style={{ gap: '7px', color: '#3A3A3A', fontSize: '12px', lineHeight: '20px' }} />
           <Input
             id="password"
             type="password"
@@ -40,17 +40,17 @@ const LoginPage: React.FC = () => {
             placeholder={t('LoginPage.enter_password')}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={{ marginBottom: '20px' }}
+            style={{ padding: '14px', border: '2px solid #E4E4E7', borderRadius: '8px' }}
           />
           <span>{t('LoginPage.required_field')}</span>
         </div>
-        <div className={styles.rememberMeContainer} style={{ justifyContent: 'space-between', marginBottom: '20px' }}>
+        <div className={styles.rememberMeContainer}>
           <label className={styles.rememberMeLabel}>
             <Input
               type="checkbox"
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
-              style={{ marginRight: '10px' }}
+              id="remember-password"
             />
             <span>{t('LoginPage.remember_me')}</span>
           </label> 
@@ -58,7 +58,7 @@ const LoginPage: React.FC = () => {
         <Link href="/reset-password" translationKey="LoginPage.forgot_password" />
         <Button className={styles.signInButton} translationKey="LoginPage.sign_in">{t('LoginPage.sign_in')}</Button>
         <div className={styles.accountQuery}>
-          <span className={styles.accountQueryText} style={{ gap: '8px', marginTop: '20px' }}>{t('LoginPage.already_have_account')}</span>
+          <span className={styles.accountQueryText}>{t('LoginPage.already_have_account')}?</span>
           <Link href="/sign-up" translationKey="LoginPage.sign_up_here" />
         </div>
       </div>

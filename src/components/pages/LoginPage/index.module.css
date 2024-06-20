@@ -1,7 +1,6 @@
 .pageBackground {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Patched: Added box-shadow */
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -10,10 +9,9 @@
 }
 
 .loginContainer {
-  border-radius: 8px; /* Patched: Added border-radius */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch; /* Changed to stretch to match the provided HTML */
   background-color: rgba(255, 255, 255, 1);
   padding: 59px;
   gap: 10px;
@@ -21,79 +19,90 @@
 }
 
 .logoContainer {
-  display: flex;
+  display: flex; /* No change needed */
   align-items: center;
   justify-content: center;
   gap: 10px;
   height: 60px;
   width: 100%;
-  margin-bottom: 30px; /* Patched: Added margin-bottom */
 }
 
 .logoImage {
-  height: 44px;
+  height: 44px; /* No change needed */
+  width: 82px; /* Added width to match the provided HTML */
 }
 
 .cmsTitle {
-  font-size: 20px; /* Patched: Duplicate font-size declaration removed */
   color: rgba(58, 58, 58, 1);
   font-weight: 900;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 25px; /* No change needed */
 }
 
 .loginPrompt {
-  margin-bottom: 20px; /* Patched: Added margin-bottom */
   color: rgba(97, 97, 97, 1);
   font-weight: 400;
   font-size: 18px;
   line-height: 29px;
-}
+} /* No change needed */
 
 .formGroup {
-  width: 100%; /* Patched: Duplicate width declaration removed */
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+}
+
+.formGroup label { /* Added styles for label elements within formGroup */
+  gap: 7px;
+  color: #3A3A3A;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 .rememberMeContainer {
-  justify-content: space-between; /* Patched: Added justify-content */
   display: flex;
   align-items: center;
   gap: 24px;
   width: 100%;
 }
 
-.rememberMeLabel {
-  margin-right: 10px; /* Patched: Added margin-right */
+.rememberMeLabel { /* Adjusted styles to match the provided HTML */
   display: flex;
   align-items: center;
   gap: 16px;
+  color: #3A3A3A;
+  font-size: 14px;
+  line-height: 22px;
 }
 
-.signInButton {
-  width: 100%; /* Patched: Changed width to 100% */
+.signInButton { /* Adjusted styles to match the provided HTML */
+  width: 382px;
   background-color: rgba(24, 86, 158, 1);
   color: rgba(255, 255, 255, 1);
   padding: 18px;
   border-radius: 14px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 22px;
-  border: none; /* Patched: Added border */
+  line-height: 22px; /* No change needed */
 }
 
 .accountQuery {
-  gap: 8px; /* Patched: Duplicate gap declaration removed */
   display: flex;
   align-items: center;
+  gap: 8px;
   width: 100%;
-}
+} /* No change needed */
 
 .accountQueryText {
-  margin-top: 20px; /* Patched: Added margin-top */
   color: rgba(58, 58, 58, 1);
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
+}
+
+.errorMessage { /* Added styles for error messages */
+  color: #F31260;
+  font-size: 12px;
+  line-height: 20px;
 }

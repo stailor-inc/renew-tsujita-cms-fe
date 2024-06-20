@@ -8,13 +8,22 @@ export interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> 
   style?: React.CSSProperties; // Added style prop for custom styling
   className?: string; // Added className prop for custom class names
   containerStyle?: React.CSSProperties; // Added containerStyle prop for custom styling of the container
+  containerClassName?: string; // Added containerClassName prop for custom class names of the container
 }
 
-const Label: React.FC<LabelProps> = ({ translationKey, style, className, containerStyle, children, ...props }) => {
+const Label: React.FC<LabelProps> = ({
+  translationKey,
+  style,
+  className,
+  containerStyle,
+  containerClassName,
+  children,
+  ...props
+}) => {
   const { t } = useTranslation();
 
   return (
-    <div style={containerStyle}>
+    <div style={containerStyle} className={clsx(containerClassName)}>
       <label className={clsx(styles.label, className)} style={style} {...props}>
         {t(translationKey)}
         {children}
@@ -23,4 +32,4 @@ const Label: React.FC<LabelProps> = ({ translationKey, style, className, contain
   );
 };
 
-export default Label;
+export default React.memo(Label);
